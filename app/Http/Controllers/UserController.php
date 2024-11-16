@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\View;
 
 class UserController extends Controller
 {
@@ -28,19 +29,26 @@ class UserController extends Controller
     //     return view("admin.about");
     // }
 
-    function userHome(){
-        echo "22";
-        return view("home");
+    function userHome()
+    {
+        $name = "anik";
+        $arr = [11, 22, 6, 4];
+        return view("home", ['name'=> $name, 'arr'=>$arr]);
     }
 
-    function userAbout($name){
-        return view("about",['user'=> $name]);
-    }
+    // function userAbout($name){
+    //     return view("about",['user'=> $name]);
+    // }
 
 
-    function adminLogin(){
-        echo "admin";
-        return view("admin.login");
-    }
+    // function adminLogin(){
+    //     if (view()->exists('admin.login'))
+    //     {
+    //         echo "admin";
+    //         return view("admin.login");
+    //     }else{
+    //         echo "no";
+    //     }
+    // }
 
 }

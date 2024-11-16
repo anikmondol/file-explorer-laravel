@@ -10,12 +10,15 @@ Route::get('/', function () {
 
 
 Route::get("user-home", [UserController::class, "userHome"]);
-Route::get("user-about/{name}", [UserController::class, "userAbout"]);
-Route::get("admin-about", [UserController::class, "adminLogin"]);
 
- Route::view("/about", 'about');
- Route::view("/home", 'home');
- Route::view("/admin", 'admin.login');
+
+// Route::get("user-home", [UserController::class, "userHome"]);
+// Route::get("user-about/{name}", [UserController::class, "userAbout"]);
+// Route::get("admin-about", [UserController::class, "adminLogin"]);
+
+//  Route::view("/about", 'about');
+//  Route::view("/home", 'home');
+//  Route::view("/admin", 'admin.login');
 
 
 // Route::get("user",[UserController::class,'getUSer']);
