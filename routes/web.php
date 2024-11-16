@@ -8,15 +8,23 @@ Route::get('/', function () {
 });
 
 
-Route::get("user",[UserController::class,'getUSer']);
 
-Route::get("aboutUser",[UserController::class,'AboutUSer']);
+Route::get("user-home", [UserController::class, "userHome"]);
+Route::get("user-about/{name}", [UserController::class, "userAbout"]);
+Route::get("admin-about", [UserController::class, "adminLogin"]);
 
-Route::get("getUser/{name}",[UserController::class,'getUserName']);
+ Route::view("/about", 'about');
+ Route::view("/home", 'home');
+ Route::view("/admin", 'admin.login');
 
-Route::get("admin",[UserController::class,'adminLogin']);
 
+// Route::get("user",[UserController::class,'getUSer']);
 
+// Route::get("aboutUser",[UserController::class,'AboutUSer']);
+
+// Route::get("getUser/{name}",[UserController::class,'getUserName']);
+
+// Route::get("admin",[UserController::class,'adminLogin']);
 
 
 // Route::get('/home', function () {
@@ -32,5 +40,5 @@ Route::get("admin",[UserController::class,'adminLogin']);
 
 // Route::get('/about/{anik}', function ($anik) {
 //     // echo $anik;
-//     return view('about',['name'=>$anik]);
+//     return view('about',['user'=>$anik]);
 // });
