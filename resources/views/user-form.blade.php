@@ -57,11 +57,46 @@
         </div>
 
     </form> --}}
+{{--
+    @if ($errors->any())
+
+    @foreach ($errors->all() as $error)
+    <div style="color: red; margin-bottom: 10px">
+        {{$error}}
+    </div>
+    @endforeach
+
+    @endif --}}
+
+    <form action="addUser" method="POST">
+        @csrf
+        <div class="input-wrapper">
+            <input type="text" name="name" id="" placeholder="enter user name" value="{{old('name')}}" class="{{$errors->first('name')?'input-error':''}}">
+            <span style="color: red">@error('name')
+                {{$message}}
+            @enderror</span>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" name="email" id="" placeholder="enter user email" value="{{old('email')}}" class="{{$errors->first('email')?'input-error':''}}">
+            <span style="color: red">@error('email')
+                {{$message}}
+            @enderror</span>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" name="city" id="" placeholder="enter user city" value="{{old('city')}}" class="{{$errors->first('city')?'input-error':''}}">
+            <span style="color: red">@error('city')
+                {{$message}}
+            @enderror</span>
+        </div>
+        <div class="input-wrapper">
+            <button name="submit">Add New User</button>
+        </div>
+    </form>
 
 </div>
 
-{{-- <style>
-    input {
+<style>
+   .input-wrapper input {
         border: orange 1px solid;
         height: 35px;
         width: 200px;
@@ -74,6 +109,11 @@
         margin-bottom: 10px
     }
 
+    .input-error{
+        border: 1px solid rgb(21, 34, 216) !important;
+        color: rgb(14, 182, 233) !important;
+    }
+
     button {
         border: orange 1px solid;
         height: 35px;
@@ -82,5 +122,6 @@
         color: white;
         background-color: rgb(105, 217, 230);
         cursor: pointer;
+        margin-top: 10px
     }
-</style> --}}
+</style>
