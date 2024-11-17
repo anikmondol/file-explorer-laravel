@@ -4,20 +4,30 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StudentController;
+use App\Http\Middleware\AgeCheck;
+use App\Http\Middleware\CountryCheck;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 
+Route::get('users',[UserController::class,'users']);
+
+
+// Route::view("home", 'home')->middleware(AgeCheck::class,CountryCheck::class);
+// Route::view("about", 'about')->middleware(AgeCheck::class);
+
+
+
 // Route::view("home", 'home')->middleware('check1');
 // Route::view("home", 'home');
 // Route::view("about", 'about');
 
-Route::middleware('check1')->group(function () {
-    Route::view("home", 'home');
-    Route::view("about", 'about');
-});
+// Route::middleware('check1')->group(function () {
+//     Route::view("home", 'home');
+//     Route::view("about", 'about');
+// });
 
 
 

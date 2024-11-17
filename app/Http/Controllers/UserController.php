@@ -4,32 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\View;
+use Illuminate\Support\Facades\DB;
+
 
 class UserController extends Controller
 {
 
 
 
-
-
-    function addUser(Request $request)
-    {
-
-        $request->validate([
-            'name'=>"required | min:5",
-            'email'=>"required | email",
-            'city'=>"required | Uppercase"
-        ],[
-            'name.required' => "user name can not be empty",
-            'name.min' => "the user name filed must be at least 5 characters",
-            'city.Uppercase' => "city field must be anik",
-        ]);
-
-        return $request;
-
+    function users(){
+        return DB::select("select * from users");
     }
 
 
+    // function addUser(Request $request)
+    // {
+
+    //     $request->validate([
+    //         'name'=>"required | min:5",
+    //         'email'=>"required | email",
+    //         'city'=>"required | Uppercase"
+    //     ],[
+    //         'name.required' => "user name can not be empty",
+    //         'name.min' => "the user name filed must be at least 5 characters",
+    //         'city.Uppercase' => "city field must be anik",
+    //     ]);
+
+    //     return $request;
+
+    // }
 
 
     // function addUser(Request $request)

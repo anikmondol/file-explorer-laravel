@@ -16,9 +16,14 @@ class AgeCheck
     public function handle(Request $request, Closure $next): Response
     {
 
+        // if ($request->age < 18) {
+        //     die("you are under 18 age");
+        //  }
+
         if ($request->age < 18) {
             die("you are under 18 age");
          }
+
         return $next($request);
 
     }
