@@ -8,8 +8,15 @@ Route::get('/', function () {
 });
 
 
-Route::view("user-form", 'user-form');
-Route::post("addUser", [UserController::class, "addUser"]);
+
+Route::view("home", 'home');
+Route::view("about", 'about');
+Route::view("about/{name}", 'about');
+
+
+
+// Route::view("user-form", 'user-form');
+// Route::post("addUser", [UserController::class, "addUser"]);
 
 
 // Route::view("/user-form", 'user-form');
