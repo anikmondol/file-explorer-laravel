@@ -10,14 +10,15 @@ Route::get('/', function () {
 });
 
 
+Route::view("home", 'home');
 
 
-Route::controller(StudentController::class)->group(function(){
-    Route::get("show",'show');
-    Route::get("add", 'add');
-    Route::get("delete", 'delete');
-    Route::get('about/{name}', 'about');
-});
+// Route::controller(StudentController::class)->group(function(){
+//     Route::get("show",'show');
+//     Route::get("add", 'add');
+//     Route::get("delete", 'delete');
+//     Route::get('about/{name}', 'about');
+// });
 
 
 // Route::get('about/{name}', [StudentController::class,'about']);
