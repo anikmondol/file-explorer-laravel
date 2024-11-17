@@ -5,17 +5,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\View;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Http;
 
 class UserController extends Controller
 {
 
 
+    function getUser(){
 
-    function users(){
-        $users = DB::select("select * from users");
-        return view('users', ['users'=>$users]);
+        $response = Http::get('https://jsonplaceholder.typicode.com/users');
+        // return $response;
+        //  $response->body();
+        // return $response->status();
+        // return $response->headers();
+        return view("users", ['users'=> json_decode($response)]);
     }
+
+    // function users(){
+    //     $users = DB::select("select * from users");
+    //     return view('users', ['users'=>$users]);
+    // }
 
 
     // function addUser(Request $request)

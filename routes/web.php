@@ -13,7 +13,12 @@ Route::get('/', function () {
 
 
 
-Route::get('getStudents',[StudentController::class,'getStudents']);
+
+Route::get('users',[UserController::class,'getUser']);
+
+
+
+// Route::get('getStudents',[StudentController::class,'getStudents']);
 
 
 // Route::get('users',[UserController::class,'users']);
