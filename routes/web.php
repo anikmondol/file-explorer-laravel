@@ -9,12 +9,23 @@ Route::get('/', function () {
 });
 
 
-Route::view("home/profile", 'home')->name('hm');
-Route::view("home/profile/{name}", 'home')->name('user');
 
 
-Route::get("show", [HomeController::class,'show']);
-Route::get("user", [HomeController::class,'user']);
+// Route::prefix('student')->group(function(){
+//     Route::view("/home", 'home');
+//     Route::get("/show", [HomeController::class, 'show']);
+//     Route::get("/add", [HomeController::class, 'add']);
+// });
+
+
+
+
+// Route::view("home/profile", 'home')->name('hm');
+// Route::view("home/profile/{name}", 'home')->name('user');
+
+
+// Route::get("show", [HomeController::class,'show']);
+// Route::get("user", [HomeController::class,'user']);
 
 // Route::view("home", 'home');
 // Route::view("about", 'about');

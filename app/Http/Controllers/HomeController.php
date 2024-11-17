@@ -6,7 +6,22 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    function show(){
+
+
+function show(){
+    return "students list";
+}
+
+
+function add(){
+    return "add new students";
+}
+
+
+
+
+    /*
+  function show(){
         // return redirect()->to("home/profile");
         return to_route("hm");
     }
@@ -15,4 +30,5 @@ class HomeController extends Controller
         // return redirect()->to("home/profile");
         return to_route("user",["name"=>"anik"]);
     }
+*/
 }
