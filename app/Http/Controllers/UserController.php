@@ -36,9 +36,9 @@ class UserController extends Controller
         return view("home", ['name'=> $name, 'arr'=>$arr]);
     }
 
-    // function userAbout($name){
-    //     return view("about",['user'=> $name]);
-    // }
+    function userAbout(){
+        return view("about");
+    }
 
 
     // function adminLogin(){

@@ -11,6 +11,8 @@ Route::get('/', function () {
 
 Route::get("user-home", [UserController::class, "userHome"]);
 
+Route::get("user-about", [UserController::class, "userAbout"]);
+
 
 // Route::get("user-home", [UserController::class, "userHome"]);
 // Route::get("user-about/{name}", [UserController::class, "userAbout"]);

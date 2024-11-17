@@ -1,4 +1,6 @@
 <div>
+    <!-- Act only according to that maxim whereby you can, at the same time, will that it should become a universal law. - Immanuel Kant -->
+    @include('common.inner', ['page'=>"this is home page"])
     <h1>About page</h1>
-    <h1>{{$user}}</h1>
+    @include('common.header')
 </div>

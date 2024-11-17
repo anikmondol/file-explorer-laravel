@@ -1,6 +1,8 @@
 <div>
+    @include('common.inner', ['page'=>"this is home page"])
     <h1>Home page</h1>
-    {{$name}}
+    @include('common.header')
+    {{-- {{$name}}
     <h1>{{rand(1, 10)}}</h1>
     @foreach ($arr as $a)
         {{$a}}
@@ -10,6 +12,6 @@
     {{"ok"}}
     @else
     {{"no"}}
-    @endif
+    @endif --}}
 
 </div>
