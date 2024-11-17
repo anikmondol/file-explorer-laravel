@@ -7,7 +7,23 @@ use Illuminate\Support\View;
 
 class UserController extends Controller
 {
-    //
+
+
+
+
+
+
+    
+
+
+    // function addUser(Request $request)
+    // {
+    //      echo "add user";
+    //      return $request["name"];
+    //    print_r($request->skill);
+
+    // }
+
     // function getUSer(){
     //     return view('user');
     // }
@@ -36,14 +52,14 @@ class UserController extends Controller
     //     return view("home", ['name'=> $name, 'arr'=>$arr]);
     // }
 
-    function userHome()
-    {
-        return view("home");
-    }
+    // function userHome()
+    // {
+    //     return view("home");
+    // }
 
-    function userAbout(){
-        return view("about");
-    }
+    // function userAbout(){
+    //     return view("about");
+    // }
 
 
 
