@@ -18,10 +18,11 @@ class UserController extends Controller
         $request->validate([
             'name'=>"required | min:5",
             'email'=>"required | email",
-            'city'=>"required"
+            'city'=>"required | Uppercase"
         ],[
             'name.required' => "user name can not be empty",
             'name.min' => "the user name filed must be at least 5 characters",
+            'city.Uppercase' => "city field must be anik",
         ]);
 
         return $request;
