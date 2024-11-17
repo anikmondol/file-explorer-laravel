@@ -6,22 +6,27 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    //
-    function show(){
-        return "list of students";
+
+    function getStudents(){
+        $students = \App\Models\Student::all();
+        return view('students',['students'=>$students]);
     }
 
-    function add(){
-        return "students add";
-    }
+    // function show(){
+    //     return "list of students";
+    // }
 
-    function delete(){
-        return "students delete";
-    }
+    // function add(){
+    //     return "students add";
+    // }
 
-    function about($name){
-        return $name;
-    }
+    // function delete(){
+    //     return "students delete";
+    // }
+
+    // function about($name){
+    //     return $name;
+    // }
 
 }
 

@@ -12,8 +12,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('users',[UserController::class,'users']);
 
+Route::get('getStudents',[StudentController::class,'getStudents']);
+
+
+// Route::get('users',[UserController::class,'users']);
 
 // Route::view("home", 'home')->middleware(AgeCheck::class,CountryCheck::class);
 // Route::view("about", 'about')->middleware(AgeCheck::class);
