@@ -7,15 +7,46 @@ use App\Http\Controllers\StudentController;
 use App\Http\Middleware\AgeCheck;
 use App\Http\Middleware\CountryCheck;
 use App\Http\Controllers\UploadController;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\App;
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('SetLang')->group(function () {
+
+
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::get('setlang/{lang}', function ($lang) {
+        Session::put('lang', $lang);
+        return redirect("/");
+    });
+
+
+    Route::view("about", 'about');
+    Route::view("profile", 'profile');
+    Route::view("home", 'home');
+
+    // Route::get("about/{lang}", function ($lang) {
+    //     App::setLocale($lang); // Set the locale based on the URL parameter
+    //     return view("about", ['pageTitle' => 'about']); // Pass data to the view
+    // });
+
 });
 
 
-Route::view("upload", 'upload');
-Route::post("from", [UploadController::class, 'upload']);
+
+// Route::view("profile", 'profile');
+// Route::view("home", 'home');
+// Route::view("about", 'about');
+
+// Route::view("upload", 'upload');
+// Route::post("from", [UploadController::class, 'upload']);
 
 
 

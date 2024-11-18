@@ -1,4 +1,5 @@
 <div>
+    <h1>{{__('welcome.profilePage')}}</h1>
     {{-- <h1>profile page</h1>
     @if (session('name'))
     <h1>Wellcome to dear{{session('name')}}</h1>

@@ -1,4 +1,3 @@
 <div>
-    <h1>Home page</h1>
-
+    <h1>{{__('welcome.homePage')}}</h1>
 </div>
