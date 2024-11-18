@@ -6,10 +6,18 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StudentController;
 use App\Http\Middleware\AgeCheck;
 use App\Http\Middleware\CountryCheck;
+use App\Http\Controllers\UploadController;
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::view("upload", 'upload');
+Route::post("from", [UploadController::class, 'upload']);
+
+
 
 
 // Route::view("users", 'users');
