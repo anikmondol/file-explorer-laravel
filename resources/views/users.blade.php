@@ -1,5 +1,73 @@
 <div>
     <h1>users lists</h1>
+    <form action="/users" method="post">
+        @csrf
+        <input type="hidden" name="_method" value="delete">
+        <input type="text" name="name" placeholder="enter name">
+        <br>
+        <br>
+        <input type="email" name="email" placeholder="enter email">
+        <br>
+        <br>
+        <input type="password" name="password" placeholder="enter password">
+        <br>
+        <br>
+        <button>Submit</button>
+    </form>
+    {{-- <form action="/users" method="post">
+        @csrf
+        <input type="hidden" name="_method" value="patch ">
+        <input type="text" name="name" placeholder="enter name">
+        <br>
+        <br>
+        <input type="email" name="email" placeholder="enter email">
+        <br>
+        <br>
+        <input type="password" name="password" placeholder="enter password">
+        <br>
+        <br>
+        <button>Submit</button>
+    </form> --}}
+    {{-- <form action="/users" method="post">
+        @csrf
+        <input type="hidden" name="_method" value="PUT">
+        <input type="text" name="name" placeholder="enter name">
+        <br>
+        <br>
+        <input type="email" name="email" placeholder="enter email">
+        <br>
+        <br>
+        <input type="password" name="password" placeholder="enter password">
+        <br>
+        <br>
+        <button>Submit</button>
+    </form> --}}
+    {{-- <form action="/users" method="post">
+        @csrf
+        <input type="text" name="name" placeholder="enter name">
+        <br>
+        <br>
+        <input type="email" name="email" placeholder="enter email">
+        <br>
+        <br>
+        <input type="password" name="password" placeholder="enter password">
+        <br>
+        <br>
+        <button>Submit</button>
+    </form> --}}
+    {{-- <form action="/users" method="GET">
+        @csrf
+        <input type="text" name="name" placeholder="enter name">
+        <br>
+        <br>
+        <input type="email" name="email" placeholder="enter email">
+        <br>
+        <br>
+        <input type="password" name="password" placeholder="enter password">
+        <br>
+        <br>
+        <button>Submit</button>
+    </form> --}}
     {{-- <table border="1">
         <tr>
             <td>name</td>

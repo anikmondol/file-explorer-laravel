@@ -12,6 +12,31 @@ class UserController extends Controller
 {
 
 
+
+
+
+
+    function delete(Request $request){
+        return $request;
+      }
+
+    // function patch(Request $request){
+    //     return $request;
+    //   }
+
+    // function put(Request $request){
+    //     return $request;
+    //   }
+
+    // function post(Request $request){
+    //     return $request;
+    //   }
+
+    // function get(Request $request){
+    //   return $request;
+    // }
+
+
     // function queries()
     // {
 
