@@ -10,34 +10,44 @@ use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-Route::middleware('SetLang')->group(function () {
-
-
-    Route::get('/', function () {
-        return view('welcome');
-    });
-
-    Route::get('setlang/{lang}', function ($lang) {
-        Session::put('lang', $lang);
-        return redirect("/");
-    });
-
-
-    Route::view("about", 'about');
-    Route::view("profile", 'profile');
-    Route::view("home", 'home');
-
-    // Route::get("about/{lang}", function ($lang) {
-    //     App::setLocale($lang); // Set the locale based on the URL parameter
-    //     return view("about", ['pageTitle' => 'about']); // Pass data to the view
-    // });
-
+Route::get('/', function () {
+    return view('welcome');
 });
+
+
+Route::view("addStudent", 'addStudent');
+
+Route::post("addStudent", [StudentController::class, 'addStudent']);
+Route::get("list", [StudentController::class, 'list']);
+Route::get("delete/{id}", [StudentController::class, 'delete']);
+Route::get("edit/{id}", [StudentController::class, 'edit']);
+Route::put("edit-student/{id}", [StudentController::class, 'editStudent']);
+
+
+
+// Route::middleware('SetLang')->group(function () {
+
+
+//     Route::get('/', function () {
+//         return view('welcome');
+//     });
+
+//     Route::get('setlang/{lang}', function ($lang) {
+//         Session::put('lang', $lang);
+//         return redirect("/");
+//     });
+
+
+//     Route::view("about", 'about');
+//     Route::view("profile", 'profile');
+//     Route::view("home", 'home');
+
+//     // Route::get("about/{lang}", function ($lang) {
+//     //     App::setLocale($lang); // Set the locale based on the URL parameter
+//     //     return view("about", ['pageTitle' => 'about']); // Pass data to the view
+//     // });
+
+// });
 
 
 

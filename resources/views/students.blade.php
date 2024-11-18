@@ -1,18 +1,23 @@
 <div>
     <h1>students list</h1>
-    {{-- <table border="1">
+    <table border="1">
         <tr>
             <th>name</th>
             <th>email</th>
-            <th>batch</th>
+            <th>phone</th>
+            <th>Operation</th>
         </tr>
         @foreach ($students as $student)
         <tr>
             <td>{{$student->name}}</td>
             <td>{{$student->email}}</td>
-            <td>{{$student->batch}}</td>
+            <td>{{$student->phone}}</td>
+            <td>
+                <a style="margin: 0px 2px;" href="{{'delete/'.$student->id}}">Delete</a>
+                <a style="margin: 0px 2px;" href="{{'edit/'.$student->id}}">Edit</a>
+            </td>
         </tr>
         @endforeach
-    </table> --}}
+    </table>
 
 </div>
