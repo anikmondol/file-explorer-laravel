@@ -1,6 +1,6 @@
 <div>
     <h1>users lists</h1>
-    <table border="1">
+    {{-- <table border="1">
         <tr>
             <td>name</td>
             <td>email</td>
@@ -13,7 +13,7 @@
             <td>{{$user->phone}}</td>
         </tr>
         @endforeach
-    </table>
+    </table> --}}
     {{-- {{print_r($users)}} --}}
     {{-- {{print_r($users)}} --}}
     {{-- <table border="1">

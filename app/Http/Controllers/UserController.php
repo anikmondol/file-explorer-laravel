@@ -12,8 +12,8 @@ class UserController extends Controller
 {
 
 
-    function queries()
-    {
+    // function queries()
+    // {
 
         /** get date **/
         // $response = User::all();
@@ -48,18 +48,18 @@ class UserController extends Controller
         // }
 
           /** delete date **/
-          $response = User::where('id', 10)->delete();
+        //   $response = User::where('id', 10)->delete();
 
-          if ($response) {
-              return "delete data";
-          } else {
-              return "date not delete";
-          }
+        //   if ($response) {
+        //       return "delete data";
+        //   } else {
+        //       return "date not delete";
+        //   }
 
 
 
         // return view('users', ['users' => $response]);
-    }
+    // }
 
     // function queries()
     // {
