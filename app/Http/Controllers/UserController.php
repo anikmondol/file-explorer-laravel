@@ -12,15 +12,23 @@ class UserController extends Controller
 {
 
 
-    function login(Request $request){
-        $request->session()->put('name', $request->input('name'));
-       return redirect("profile");
-    }
+    // function addUser(Request $request)
+    // {
+    //     // db code
+    //     $request->session()->flash("message", "User has been added successfully");
+    //     return redirect("users");
+    // }
 
-    function logout(){
-       session()->pull('name');
-       return redirect("profile");
-    }
+
+    // function login(Request $request){
+    //     $request->session()->put('name', $request->input('name'));
+    //    return redirect("profile");
+    // }
+
+    // function logout(){
+    //    session()->pull('name');
+    //    return redirect("profile");
+    // }
 
     // function login(Request $request){
     //     echo $request->method();

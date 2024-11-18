@@ -1,6 +1,15 @@
+
+
 <div>
-    <h1>users lists</h1>
-    {{-- <form action="users" method="post">
+    <h1>Add new User</h1>
+    {{-- @if (session('message'))
+        <span
+            style="color: green; font-weight: bold; border: 1px solid green; padding: 10px; border-radius: 5px; background-color: #e7f9e7; margin-bottom: 20px; display: inline-block">
+            {{ session('message') }}
+        </span>
+    @endif
+
+    <form action="add" method="post">
         @csrf
         <input type="text" name="name" placeholder="enter name">
         <br>
@@ -13,6 +22,7 @@
         <br>
         <button>Submit</button>
     </form> --}}
+
     {{-- <h1>users lists</h1>
     <form action="/users" method="post">
         @csrf

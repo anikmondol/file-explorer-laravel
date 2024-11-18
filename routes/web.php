@@ -12,11 +12,14 @@ Route::get('/', function () {
 });
 
 
-Route::view("login", 'login');
-Route::view("profile", 'profile');
+// Route::view("users", 'users');
+// Route::post("add", [UserController::class, 'addUser']);
 
-Route::post("login", [UserController::class, 'login']);
-Route::get("logout", [UserController::class, 'logout']);
+// Route::view("login", 'login');
+// Route::view("profile", 'profile');
+
+// Route::post("login", [UserController::class, 'login']);
+// Route::get("logout", [UserController::class, 'logout']);
 
 
 // Route::post("users", [UserController::class, 'login']);

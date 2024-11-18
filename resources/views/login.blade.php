@@ -1,6 +1,6 @@
 <div>
     <h1>Login page</h1>
-    <form action="login" method="post">
+    {{-- <form action="login" method="post">
         @csrf
         <input type="text" name="name" placeholder="enter name">
         <br>
@@ -12,5 +12,5 @@
         <br>
         <br>
         <button>Submit</button>
-    </form>
+    </form> --}}
 </div>
