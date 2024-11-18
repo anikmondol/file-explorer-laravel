@@ -11,13 +11,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post("users", [UserController::class, 'login']);
 
-Route::delete("users", [UserController::class, 'delete']);
+Route::view("form", 'users');
+
+
+// Route::any('users',[UserController::class,'any']);
+// Route::match(['post', 'get'],'/users',[UserController::class, 'group1']);
+// Route::match(['put', 'delete'],'/users',[UserController::class, 'group2']);
+
+
+// Route::delete("users", [UserController::class, 'delete']);
 // Route::patch("users", [UserController::class, 'patch']);
 // Route::put("users", [UserController::class, 'put']);
 // Route::post("users", [UserController::class, 'post']);
 // Route::get("users", [UserController::class, 'get']);
-Route::view("form", 'users');
+// Route::view("form", 'users');
 
 
 // Route::get("user", [UserController::class, 'queries']);

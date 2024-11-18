@@ -11,14 +11,45 @@ use App\Models\User;
 class UserController extends Controller
 {
 
+    function login(Request $request){
+        echo $request->method();
+        echo "<br>";
+        echo $request->path();
+        echo "<br>";
+        echo $request->url();
+        echo "<br>";
+        // print_r($request->input());
+        // echo "<br>";
+        print_r($request->collect());
+        echo "<br>";
+        if ($request->isMethod("POST")) {
+            echo "method is POST";
+        } else {
+            echo "method is other";
+        }
+        echo "<br>";
+        echo $request->ip();
+
+    }
 
 
+    // function group2(){
+    //     return "this is group2";
+    // }
+
+    // function group1(){
+    //     return "this is group1";
+    // }
+
+    // function any(){
+    //     return "this any method";
+    // }
 
 
-
-    function delete(Request $request){
-        return $request;
-      }
+    // function delete(Request $request)
+    // {
+    //     return $request;
+    // }
 
     // function patch(Request $request){
     //     return $request;
@@ -40,50 +71,50 @@ class UserController extends Controller
     // function queries()
     // {
 
-        /** get date **/
-        // $response = User::all();
-        // $response = User::where('name','a')->get;
-        // $response = User::where('name', "anik")->first();
-        // $response = User::find(1);
-        // $response = User::where('name','LIKE',"%r%")->first();
-        // $response = User::where('name','LIKE',"%r%")->get();
-        // $response = [$response];
+    /** get date **/
+    // $response = User::all();
+    // $response = User::where('name','a')->get;
+    // $response = User::where('name', "anik")->first();
+    // $response = User::find(1);
+    // $response = User::where('name','LIKE',"%r%")->first();
+    // $response = User::where('name','LIKE',"%r%")->get();
+    // $response = [$response];
 
 
-        /** insert date **/
-        // $response = User::insert([
-        //     'name' => "monjoy",
-        //     'email' => "monjoy@gmail.com",
-        //     'phone' => "124578",
-        // ]);
-        // if ($response) {
-        //     return "insert data";
-        // }else{
-        //     return "date not insert";
-        // }
+    /** insert date **/
+    // $response = User::insert([
+    //     'name' => "monjoy",
+    //     'email' => "monjoy@gmail.com",
+    //     'phone' => "124578",
+    // ]);
+    // if ($response) {
+    //     return "insert data";
+    // }else{
+    //     return "date not insert";
+    // }
 
 
-        /** update date **/
-        // $response = User::where('name', 'anik')->update(['name' => 'ritu']);
+    /** update date **/
+    // $response = User::where('name', 'anik')->update(['name' => 'ritu']);
 
-        // if ($response) {
-        //     return "update data";
-        // } else {
-        //     return "date not update";
-        // }
+    // if ($response) {
+    //     return "update data";
+    // } else {
+    //     return "date not update";
+    // }
 
-          /** delete date **/
-        //   $response = User::where('id', 10)->delete();
+    /** delete date **/
+    //   $response = User::where('id', 10)->delete();
 
-        //   if ($response) {
-        //       return "delete data";
-        //   } else {
-        //       return "date not delete";
-        //   }
+    //   if ($response) {
+    //       return "delete data";
+    //   } else {
+    //       return "date not delete";
+    //   }
 
 
 
-        // return view('users', ['users' => $response]);
+    // return view('users', ['users' => $response]);
     // }
 
     // function queries()
