@@ -6,57 +6,108 @@ use Illuminate\Http\Request;
 use Illuminate\Support\View;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
+use App\Models\User;
 
 class UserController extends Controller
 {
 
+
     function queries()
     {
 
-        /** get data **/
-        $result = DB::table('users')->get();
-        // $result = DB::table('users')->where('name', 'joy')->get();
-        // $result =DB::table('users')->find(2);
-        // $result = DB::table('users')->first();
-        // $result =[$result];
+        /** get date **/
+        // $response = User::all();
+        // $response = User::where('name','a')->get;
+        // $response = User::where('name', "anik")->first();
+        // $response = User::find(1);
+        // $response = User::where('name','LIKE',"%r%")->first();
+        // $response = User::where('name','LIKE',"%r%")->get();
+        // $response = [$response];
 
 
-        /** get insert data **/
-        // $result = DB::table('users')->insert([
-        //     'name' => "anik",
-        //     'email' => "ak@gmail.com",
-        //     'phone' => '01235477'
+        /** insert date **/
+        // $response = User::insert([
+        //     'name' => "monjoy",
+        //     'email' => "monjoy@gmail.com",
+        //     'phone' => "124578",
         // ]);
-
-        // if ($result) {
+        // if ($response) {
         //     return "insert data";
         // }else{
         //     return "date not insert";
         // }
 
 
-         /** get update data **/
-        // $result = DB::table('users')->where('id', 8)->update(['name'=>'ritu']);
+        /** update date **/
+        // $response = User::where('name', 'anik')->update(['name' => 'ritu']);
 
-        // if ($result) {
+        // if ($response) {
         //     return "update data";
-        // }else{
+        // } else {
         //     return "date not update";
         // }
 
+          /** delete date **/
+          $response = User::where('id', 10)->delete();
 
-          /** data delete **/
-        //   $result = DB::table('users')->where('id', 7)->delete();
-
-        //   if ($result) {
-        //       return "delete data";
-        //   }else{
-        //       return "date not delete";
-        //   }
+          if ($response) {
+              return "delete data";
+          } else {
+              return "date not delete";
+          }
 
 
-        return view('users',['users'=>$result]);
+
+        // return view('users', ['users' => $response]);
     }
+
+    // function queries()
+    // {
+
+    /** get data **/
+    // $result = DB::table('users')->get();
+    // $result = DB::table('users')->where('name', 'joy')->get();
+    // $result =DB::table('users')->find(2);
+    // $result = DB::table('users')->first();
+    // $result =[$result];
+
+
+    /** get insert data **/
+    // $result = DB::table('users')->insert([
+    //     'name' => "anik",
+    //     'email' => "ak@gmail.com",
+    //     'phone' => '01235477'
+    // ]);
+
+    // if ($result) {
+    //     return "insert data";
+    // }else{
+    //     return "date not insert";
+    // }
+
+
+    /** get update data **/
+    // $result = DB::table('users')->where('id', 8)->update(['name'=>'ritu']);
+
+    // if ($result) {
+    //     return "update data";
+    // }else{
+    //     return "date not update";
+    // }
+
+
+    /** data delete **/
+    //   $result = DB::table('users')->where('id', 7)->delete();
+
+    //   if ($result) {
+    //       return "delete data";
+    //   }else{
+    //       return "date not delete";
+    //   }
+
+
+    // return view('users',['users'=>$result]);
+    // }
 
 
     // function getUser(){

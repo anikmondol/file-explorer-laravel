@@ -13,7 +13,10 @@ Route::get('/', function () {
 
 
 
-Route::get("users", [UserController::class, 'queries']);
+Route::get("user", [UserController::class, 'queries']);
+
+
+// Route::get("users", [UserController::class, 'queries']);
 
 
 // Route::get('users',[UserController::class,'getUser']);
