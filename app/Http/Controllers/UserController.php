@@ -11,26 +11,37 @@ use App\Models\User;
 class UserController extends Controller
 {
 
-    function login(Request $request){
-        echo $request->method();
-        echo "<br>";
-        echo $request->path();
-        echo "<br>";
-        echo $request->url();
-        echo "<br>";
-        // print_r($request->input());
-        // echo "<br>";
-        print_r($request->collect());
-        echo "<br>";
-        if ($request->isMethod("POST")) {
-            echo "method is POST";
-        } else {
-            echo "method is other";
-        }
-        echo "<br>";
-        echo $request->ip();
 
+    function login(Request $request){
+        $request->session()->put('name', $request->input('name'));
+       return redirect("profile");
     }
+
+    function logout(){
+       session()->pull('name');
+       return redirect("profile");
+    }
+
+    // function login(Request $request){
+    //     echo $request->method();
+    //     echo "<br>";
+    //     echo $request->path();
+    //     echo "<br>";
+    //     echo $request->url();
+    //     echo "<br>";
+    //     print_r($request->input());
+    //     echo "<br>";
+    //     print_r($request->collect());
+    //     echo "<br>";
+    //     if ($request->isMethod("POST")) {
+    //         echo "method is POST";
+    //     } else {
+    //         echo "method is other";
+    //     }
+    //     echo "<br>";
+    //     echo $request->ip();
+
+    // }
 
 
     // function group2(){

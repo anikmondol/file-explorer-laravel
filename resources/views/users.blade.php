@@ -1,6 +1,6 @@
 <div>
     <h1>users lists</h1>
-    <form action="users" method="post">
+    {{-- <form action="users" method="post">
         @csrf
         <input type="text" name="name" placeholder="enter name">
         <br>
@@ -12,7 +12,7 @@
         <br>
         <br>
         <button>Submit</button>
-    </form>
+    </form> --}}
     {{-- <h1>users lists</h1>
     <form action="/users" method="post">
         @csrf

@@ -11,9 +11,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post("users", [UserController::class, 'login']);
 
-Route::view("form", 'users');
+Route::view("login", 'login');
+Route::view("profile", 'profile');
+
+Route::post("login", [UserController::class, 'login']);
+Route::get("logout", [UserController::class, 'logout']);
+
+
+// Route::post("users", [UserController::class, 'login']);
+
+// Route::view("form", 'users');
 
 
 // Route::any('users',[UserController::class,'any']);

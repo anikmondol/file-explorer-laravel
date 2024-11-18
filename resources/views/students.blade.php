@@ -1,6 +1,6 @@
 <div>
     <h1>students list</h1>
-    <table border="1">
+    {{-- <table border="1">
         <tr>
             <th>name</th>
             <th>email</th>
@@ -13,6 +13,6 @@
             <td>{{$student->batch}}</td>
         </tr>
         @endforeach
-    </table>
+    </table> --}}
 
 </div>
