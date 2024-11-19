@@ -7,6 +7,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Middleware\AgeCheck;
 use App\Http\Middleware\CountryCheck;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\ImageController;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
 
@@ -15,15 +16,20 @@ Route::get('/', function () {
 });
 
 
-Route::view("addStudent", 'addStudent');
+Route::view("upload", 'upload');
+Route::post("upload", [ImageController::class, 'upload']);
+Route::get("imageList", [ImageController::class, 'imageList']);
 
-Route::post("addStudent", [StudentController::class, 'addStudent']);
-Route::get("list", [StudentController::class, 'list']);
-Route::get("delete/{id}", [StudentController::class, 'delete']);
-Route::get("edit/{id}", [StudentController::class, 'edit']);
-Route::put("edit-student/{id}", [StudentController::class, 'editStudent']);
-Route::get("search", [StudentController::class, 'search']);
 
+// Route::view("addStudent", 'addStudent');
+
+// Route::post("addStudent", [StudentController::class, 'addStudent']);
+// Route::get("list", [StudentController::class, 'list']);
+// Route::get("delete/{id}", [StudentController::class, 'delete']);
+// Route::get("edit/{id}", [StudentController::class, 'edit']);
+// Route::put("edit-student/{id}", [StudentController::class, 'editStudent']);
+// Route::get("search", [StudentController::class, 'search']);
+// Route::post("delete-multiple", [StudentController::class, 'deleteMultiple']);
 
 
 // Route::middleware('SetLang')->group(function () {

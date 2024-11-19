@@ -1,6 +1,6 @@
 <div>
     <h1>Add new Student</h1>
-    <form action="addStudent" method="POST">
+    {{-- <form action="addStudent" method="POST">
         @csrf
         <input type="text" name="name" placeholder="enter name">
         @if ($errors->has('name'))
@@ -21,5 +21,5 @@
         <br>
         <br>
         <button name="submit" type="submit">Submit</button>
-    </form>
+    </form> --}}
 </div>

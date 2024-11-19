@@ -1,6 +1,6 @@
 <div>
     <h1>Add new Student</h1>
-    <form action="/edit-student/{{$student->id}}" method="POST">
+    {{-- <form action="/edit-student/{{$student->id}}" method="POST">
         @csrf
         <input type="hidden" name="_method" value="put" id="{{$student->id}}">
         <input type="text" name="name" value="{{$student->name}}" placeholder="enter name">
@@ -23,5 +23,5 @@
         <br>
         <button name="submit" type="submit">Submit</button>
         <button><a href="/list">Cancel</a></button>
-    </form>
+    </form> --}}
 </div>
