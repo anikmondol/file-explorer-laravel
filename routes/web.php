@@ -15,10 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view("about", 'about');
+Route::view("home", 'home');
+Route::view("login", 'login');
 
-Route::view("upload", 'upload');
-Route::post("upload", [ImageController::class, 'upload']);
-Route::get("imageList", [ImageController::class, 'imageList']);
+// Route::view("upload", 'upload');
+// Route::post("upload", [ImageController::class, 'upload']);
+// Route::get("imageList", [ImageController::class, 'imageList']);
 
 
 // Route::view("addStudent", 'addStudent');
