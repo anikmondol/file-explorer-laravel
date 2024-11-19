@@ -1,5 +1,9 @@
 <div>
     <h1>students list</h1>
+    <form action="search" method="get">
+        <input type="text" placeholder="Search with name" name="search" value="{{@$search}}">
+        <button>Search</button>
+    </form>
     <table border="1">
         <tr>
             <th>name</th>

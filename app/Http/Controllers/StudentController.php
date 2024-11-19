@@ -71,6 +71,12 @@ class StudentController extends Controller
 
     }
 
+
+    function search(Request $request){
+        $studentsDate = Student::where("name", 'like', "%$request->search%")->get();
+        return view("students", ['students' => $studentsDate,"search"=>$request->search]);
+    }
+
     // function getStudents(){
     //     $students = \App\Models\Student::all();
     //     return view('students',['students'=>$students]);
