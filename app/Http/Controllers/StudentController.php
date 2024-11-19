@@ -30,7 +30,7 @@ class StudentController extends Controller
 
     function list()
     {
-        $result = Student::all();
+        $result = Student::paginate(5);
 
         return view("students", ['students' => $result]);
     }

@@ -19,9 +19,17 @@
             <td>
                 <a style="margin: 0px 2px;" href="{{'delete/'.$student->id}}">Delete</a>
                 <a style="margin: 0px 2px;" href="{{'edit/'.$student->id}}">Edit</a>
+                <a style="margin: 0px 2px;" href="{{'addStudent'}}">Add</a>
             </td>
         </tr>
         @endforeach
     </table>
+    {{$students->links()}}
 
 </div>
+
+<style>
+    .w-5.h-5{
+        width: 20px;
+    }
+</style>
