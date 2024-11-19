@@ -15,9 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view("about", 'about');
-Route::view("home", 'home');
-Route::view("login", 'login');
+
+Route::get("save", [StudentController::class, 'save']);
+
+// Route::get("list", [StudentController::class, 'list']);
+
+
+// Route::view("about", 'about');
+// Route::view("home", 'home');
+// Route::view("login", 'login');
 
 // Route::view("upload", 'upload');
 // Route::post("upload", [ImageController::class, 'upload']);

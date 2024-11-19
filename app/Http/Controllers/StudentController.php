@@ -9,6 +9,23 @@ class StudentController extends Controller
 {
 
 
+    function list(){
+        return Student::all();
+    }
+
+    function save(){
+        $student = new Student();
+
+        $student->name="joh";
+        $student->email="joh@gamil.com";
+        $student->phone="545485";
+
+        if ($student->save()) {
+            return "done";
+        }
+    }
+
+
     // function addStudent(Request $request)
     // {
     //     $request->validate([
