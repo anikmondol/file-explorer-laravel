@@ -9,6 +9,7 @@ use App\Http\Middleware\CountryCheck;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\SellerController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
 
@@ -18,9 +19,13 @@ Route::get('/', function () {
 
 
 
-Route::get("one-one", [SellerController::class, 'oneOne']);
-Route::get("one-many", [SellerController::class, 'oneMany']);
-Route::get("many-one", [SellerController::class, 'manyOne']);
+
+Route::get("send-mail", [MailController::class, 'sendEmail']);
+
+
+// Route::get("one-one", [SellerController::class, 'oneOne']);
+// Route::get("one-many", [SellerController::class, 'oneMany']);
+// Route::get("many-one", [SellerController::class, 'manyOne']);
 
 // Route::get("save", [StudentController::class, 'save']);
 
