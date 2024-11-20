@@ -12,7 +12,9 @@ class SellerController extends Controller
        return Seller::find(3)->productDate;
     }
 
-    // function manyRel(){
-    //     return "manyRel";
-    //  }
+    function manyRel(){
+        return Seller::find(2)->productManyDate;
+     }
+
+     
 }

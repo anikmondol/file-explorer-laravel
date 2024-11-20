@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 
 Route::get("list", [SellerController::class, 'list']);
+Route::get("many-rel", [SellerController::class, 'manyRel']);
 
 // Route::get("save", [StudentController::class, 'save']);
 

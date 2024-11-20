@@ -12,4 +12,8 @@ class Seller extends Model
         return $this->hasOne("App\Models\Product");
     }
 
+    function productManyDate(){
+        return $this->hasMany("App\Models\Product");
+    }
+
 }
