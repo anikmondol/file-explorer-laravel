@@ -18,8 +18,9 @@ Route::get('/', function () {
 
 
 
-Route::get("list", [SellerController::class, 'list']);
-Route::get("many-rel", [SellerController::class, 'manyRel']);
+Route::get("one-one", [SellerController::class, 'oneOne']);
+Route::get("one-many", [SellerController::class, 'oneMany']);
+Route::get("many-one", [SellerController::class, 'manyOne']);
 
 // Route::get("save", [StudentController::class, 'save']);
 
