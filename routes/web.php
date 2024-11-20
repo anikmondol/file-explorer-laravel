@@ -8,6 +8,7 @@ use App\Http\Middleware\AgeCheck;
 use App\Http\Middleware\CountryCheck;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\SellerController;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
 
@@ -16,7 +17,10 @@ Route::get('/', function () {
 });
 
 
-Route::get("save", [StudentController::class, 'save']);
+
+Route::get("list", [SellerController::class, 'list']);
+
+// Route::get("save", [StudentController::class, 'save']);
 
 // Route::get("list", [StudentController::class, 'list']);
 
