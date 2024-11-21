@@ -20,8 +20,8 @@ Route::get('/', function () {
 
 
 
-Route::get("send-mail", [MailController::class, 'sendEmail']);
-
+Route::post("send-mail", [MailController::class, 'sendEmail']);
+Route::view("send-mail", 'send-mail');
 
 // Route::get("one-one", [SellerController::class, 'oneOne']);
 // Route::get("one-many", [SellerController::class, 'oneMany']);
